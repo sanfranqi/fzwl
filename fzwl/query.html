@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>物流查询</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Inc/query.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="margin-top:5%;margin-left:40%;">
+			<div class="row">
+				<form class="form-inline" method="get" action="query.html">
+					<div class="form-group">
+						<label for="sn">运单号：</label>
+						<input type="text" class="form-control" id="sn_code" name="sn_code" style="font-size:16px;" placeholder="请输入15位运单号" />
+					</div>
+					<button type="submit" class="btn btn-primary">查&nbsp;&nbsp;询</button>	
+				</form>
+			</div>
+			<div class="row" style="margin-top:30px">	
+				<label id="status_info"></label>
+			</div>
+			<div class="row" style="margin-top:20px">	
+				<table id="table_info" class="table table-hover table-striped" style="display: none;">
+					<thead>
+						<tr>
+							<th>
+								到达地址
+							</th>
+							<th>
+								到达时间
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="step_1">
+							<td>
+								仓山
+							</td>
+							<td>
+								<p id="step_1_time"></p>
+							</td>
+						</tr>
+						<tr id="step_2">
+							<td>
+								台江
+							</td>
+							<td>
+								<p id="step_2_time"></p>
+							</td>
+						</tr>
+						<tr id="step_3">
+							<td>
+								鼓楼
+							</td>
+							<td>
+								<p id="step_3_time"></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div  id="warn_div" class="alert alert-danger" role="alert" style="display:none">
+		<strong>Error!</strong>&nbsp;&nbsp;&nbsp;&nbsp;<label id="warn_area"></label>
+	</div>
+</body>
+<script type="text/javascript">
+function Request(sn_code){ 
+	var strHref = window.document.location.href; 
+	var intPos = strHref.indexOf("?"); 
+	var strRight = strHref.substr(intPos + 1); 
+
+	var arrTmp = strRight.split("&"); 
+	for(var i = 0; i < arrTmp.length; i++) 
+	{ 
+		var arrTemp = arrTmp[i].split("="); 
+		if(arrTemp[0].toUpperCase() == sn_code.toUpperCase()) return arrTemp[1]; 
+	} 
+	return "";
+} 
+
+sn_code=Request('sn_code');
+
+if(sn_code!=""){
+	document.getElementById("sn_code").value=sn_code;
+	getInfo();
+}
+</script>
+</html>
