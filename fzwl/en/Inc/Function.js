@@ -215,15 +215,17 @@ function iNews(Val){
 }
 
 function CheckTrack(ObjForm,Language){
-	if (ObjForm.TrackNum.value==""){
-		if (Language=="en"){
-			alert("Please enter the waybill number!");
-		}
-		else {
-			alert("請輸入運單號！");
-		}
-		ObjForm.TrackNum.focus();
+	var billNo= ObjForm.billNO.value;
+	if(billNo=="null"||billNo==""||billNo.length!=10){
+	  	$("#billNo").focus();
+		alert("运单号输入错误!");	
+		return false;
+  	}
+  	if(prefix!="11112"){
+		$("#billNo").focus();
+		alert("运单号输入错误!");	
 		return false;
 	}
+	
 	ObjForm.submit();
 }

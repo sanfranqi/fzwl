@@ -1,51 +1,53 @@
-﻿<?PHP 
+﻿<?php include('DBConnector.php');?>
+<?PHP 
 Class Bill
 {
 	public $id;
 	public $billNo;
 	public $remark;
-	public $addTime; 
-	var $conn;
-
-    function __construct() {
-		$this->conn = mysqli_connect("localhost", "root", "888888", "fzwl"); 
-		mysqli_query($this->conn, "SET NAMES utf-8");
-	}
-		
-	function __destruct() {
-		mysqli_close($this->conn);
-    }
+	public $addTime;
 
 	function getBillInfo($id)
 	{
+		$conn = new DBConnector();
 		$sql="SELECT * FROM bill WHERE id=".$id;
-		$results = $this->conn->query($sql);
-		return $results;
+		$results = $conn->conn->query($sql);
+		$row = $results->fetch_row();
+		$this->id=$row[0];
+		$this->billNo=$row[1];
+		$this->remark=$row[2];
+		$this->addTime=$row[3];
+		return $this;
 	} 
 
 	function getBillList()
 	{
-		$sql="SELECT * FROM bill Order By add_time DESC";
-		$results = $this->conn->query($sql);
+		$conn = new DBConnector();
+		$sql="SELECT * FROM bill Order By id DESC";
+		$results = $conn->conn->query($sql);
 		return $results;
 	} 
 
 	function insertBill()
 	{
+		$conn = new DBConnector();
 		$strSql="Insert Into bill (bill_no, remark, add_time) Values('" . $this->billNo . "','" . $this->remark . "','" . $this->addTime . "')";
-		$this->conn->query($strSql);
+		$results = $conn->conn->query($strSql);
+		return $results;
 	}
 	
 	function updateBill($id)
 	{
+		$conn = new DBConnector();
 		$strSql="Update bill Set bill_no='" . $this->billNo . "',remark='" . $this->remark . "' Where id=" . $id;
-		$this->conn->query($strSql);
+		$conn->conn->query($strSql);
 	} 
 
 	function deleteBill($id)
 	{
+		$conn = new DBConnector();
 		$strSql="Delete From bill Where id=" . $id;
-		$this->conn->query($strSql);
+		$conn->conn->query($strSql);
 	} 
 }
 ?>

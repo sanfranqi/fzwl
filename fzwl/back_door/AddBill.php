@@ -32,3 +32,42 @@ function checkFields() {
       </form>
 </body>
 </html>
+<table cellpadding="0" cellspacing="0" border="0"
+									class="table table-striped table-bordered" id="page_table">
+									<thead>
+										<tr>
+											<th>到达地点</th>
+											<th>到达日期</th>
+											<th>备注</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody>
+                                         <?PHP
+											include ('/class/BillDetail.php');
+											$billDetail = new BillDetail();
+											$results_detail = $billDetail->getBillDetailList ($billNo);
+											$exist_detail = false;
+											// 循环显示记录
+											while ( $row = $results_detail->fetch_row () ) {
+												$exist_detail = true;
+										 ?>
+										<tr class="odd gradeX">
+											<td><?php echo($row[2]); ?></td>
+											<td><?php echo(date('Y-m-d',$row[3])); ?></td>
+											<td><?php echo($row[4]); ?></td>
+											<td align="center">
+												<a href="#">
+													<button id="edit_detail_btn" class="btn btn-success edit_detail_btn" data-id="<?php echo($row[0]);?>" data-billNo="<?php echo($row[1]);?>" data-arriveAddress="<?php echo($row[2]);?>" data-arriveTime="<?php echo(date('Y-m-d',$row[3]));?>" data-remark="<?php echo($row[4]);?>">更新</button>
+												</a>
+												&nbsp;&nbsp;&nbsp;&nbsp;
+												<a href="#">
+													<button id="delete_detail_btn" class="btn btn-success delete_detail_btn" data-id="<?php echo($row[0]);?>">删除</button>
+												</a>
+											</td>
+										</tr>
+                                            <?php
+												}												
+											 ?>
+                                      </tbody>
+								</table>
