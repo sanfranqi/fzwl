@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -33,9 +34,9 @@
 								class="icon-user"></i>管理员<i class="caret"></i>
 						</a>
 							<ul class="dropdown-menu">
-								<li><a tabindex="-1" href="#">密码修改</a></li>
+<!-- 								<li><a tabindex="-1" href="#">密码修改</a></li> -->
 								<li class="divider"></li>
-								<li><a tabindex="-1" href="login.html">退出</a></li>
+								<li><a tabindex="-1" href="login.php" id="logout">退出</a></li>
 							</ul></li>
 					</ul>
 <!-- 					<ul class="nav"> -->
@@ -344,6 +345,24 @@ $(document).ready(function(){
 	  return false;
       
   });
+
+
+  $("#logout").click(function(){
+		$.ajax({ 
+			  type:"post", 
+			  async:false,
+			  url:"UserOP.php", 
+			  data:{    
+			  	action : "logout" 
+		      },   
+			  success: function(data){
+				  document.location=index.php;
+		      },
+		      error : function(data) {    
+		          alert("");    
+		     } 
+	    });
+});
 
   
 });

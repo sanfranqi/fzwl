@@ -1,3 +1,4 @@
+<?php include("IS_LOGIN.php");?>
 <?PHP include('/class/BillDetail.php'); ?>
 <?PHP
 	$billDetail = new BillDetail();

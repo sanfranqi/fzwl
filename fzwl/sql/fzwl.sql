@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-05-31 23:23:06
+Date: 2015-06-03 21:24:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,6 +29,10 @@ CREATE TABLE `bill` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of bill
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for bill_detail
 -- ----------------------------
 DROP TABLE IF EXISTS `bill_detail`;
@@ -43,6 +47,10 @@ CREATE TABLE `bill_detail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of bill_detail
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -53,4 +61,7 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-insert into user values(1,"chx","21218cca77804d2ba1922c33e0151105");
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', 'chx', '21218cca77804d2ba1922c33e0151105');

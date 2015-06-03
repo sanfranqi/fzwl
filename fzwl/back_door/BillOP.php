@@ -1,4 +1,5 @@
-﻿<?PHP include('/class/Bill.php'); ?>
+﻿<?php include("IS_LOGIN.php");?>
+<?PHP include('/class/Bill.php'); ?>
 <?PHP
 	$bill = new Bill();
 	$StrAction=$_POST["action"];
