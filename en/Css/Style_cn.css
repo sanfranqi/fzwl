@@ -1,0 +1,910 @@
+﻿@import url("Base.css"/*tpa=http://www.nloceanexp.com/en/Css/Base.css*/);
+body {
+	font-family:"微软雅黑", Arial, Helvetica, sans-serif;
+	color:#333;
+}
+input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+textarea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+}
+a:link,a:visited,a:active {
+	color:#333;
+	text-decoration:none;
+}
+a:hover {
+	color:#0179db;
+	text-decoration:none;
+}
+.a:link,.a:visited,.a:active {
+	color:#0179db;
+	text-decoration:none;
+}
+.a:hover {
+	color:#0179db;
+	text-decoration:underline;
+}
+.anoline {
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+.anolines a {
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+/*===================================================================================*/
+
+#main {
+
+}
+#header_blk {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:99;
+	width:100%;
+	height:103px;
+	background:url("../Images/Header_Bgs.png"/*tpa=http://www.nloceanexp.com/en/Images/Header_Bgs.png*/);
+}
+#header {
+	position:relative;
+	z-index:1;
+	margin:0px auto;
+	width:1000px;
+	height:103px;
+}
+#logo {
+	position:absolute;
+	top:20px;
+	left:0px;
+}
+#language {
+	position:absolute;
+	top:10px;
+	right:0px;
+	color:#fff;
+}
+#language a {
+	color:#fff;
+}
+#language a:hover {
+	text-decoration:underline;
+}
+#nav {
+	position:absolute;
+	top:45px;
+	right:0px;
+}
+#nav a {
+	display:block;
+	float:left;
+	margin-left:35px;
+	padding-top:5px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+.nav_over:link,.nav_over:visited,.nav_over:active,.nav_over:hover {
+	background:url("../Images/Nav_Over.jpg"/*tpa=http://www.nloceanexp.com/en/Images/Nav_Over.jpg*/) repeat-x;
+}
+.nav_out:link,.nav_out:visited,.nav_out:active {
+
+}
+.nav_out:hover {
+	background:url("../Images/Nav_Over.jpg"/*tpa=http://www.nloceanexp.com/en/Images/Nav_Over.jpg*/) repeat-x;
+}
+#flash_blk {
+	position:relative;
+	z-index:1;
+	width:100%;
+	height:600px;
+	overflow:hidden;
+}
+#flash {
+	position:absolute;
+	top:0px;
+	left:50%;
+	z-index:1;
+	margin-left:-960px;
+	width:1920px;
+	height:600px;
+	overflow:hidden;
+}
+#flash p {
+	width:1920px;
+	height:600px;
+	text-align:center;
+	font-size:0px;
+}
+#flash_button {
+	position:absolute;
+	bottom:48px;
+	left:50%;
+	z-index:2;
+	margin-left:-500px;
+	width:1000px;
+	hegiht:11px;
+	text-align:right;
+}
+#flash_button a {
+	display:inline-block;
+	margin-left:8px;
+	width:11px;
+	height:11px;
+	font-size:0px;
+	text-indent:-100px;
+	background:url("../Images/Flash_Button_Out.png"/*tpa=http://www.nloceanexp.com/en/Images/Flash_Button_Out.png*/) no-repeat;
+	overflow:hidden;
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+#flash_button a.activeSlide {
+	background:url("../Images/Flash_Button_Over.png"/*tpa=http://www.nloceanexp.com/en/Images/Flash_Button_Over.png*/) no-repeat;
+}
+#flash_button a:hover{
+	background:url("../Images/Flash_Button_Over.png"/*tpa=http://www.nloceanexp.com/en/Images/Flash_Button_Over.png*/) no-repeat;
+}
+#content {
+	margin:20px auto 0px auto;
+	width:1000px;
+}
+#left {
+	float:left;
+	width:200px;
+}
+#right {
+	float:right;
+	width:740px;
+}
+#footer_blk {
+	margin-top:30px;
+	width:100%;
+	border-top:1px solid #ddd;
+}
+#footer {
+	position:relative;
+	margin:0px auto;
+	padding:30px 0px;
+	width:1000px;
+	line-height:20px;
+	text-align:right;
+	color:#888;
+	text-align:center;
+}
+#footer a {
+	color:#888;
+}
+#footer a:hover {
+	color:#000;	
+}
+#footer_nav {
+	position:absolute;
+	top:20px;
+	left:0px;
+	text-align:left;
+}
+/*===================================================================================*/
+
+#icontent_box {
+	position:relative;
+	z-index:2;
+	margin:0px auto;
+	width:1000px;
+	height:213px;
+}
+#icontent {
+	position:absolute;
+	top:-41px;
+	left:0px;
+	width:1000px;
+	height:254px;
+	background:url("../Images/iContent_Bg.jpg"/*tpa=http://www.nloceanexp.com/en/Images/iContent_Bg.jpg*/) no-repeat;
+}
+
+#itrack_blk {
+	position:absolute;
+	top:27px;
+	left:42px;
+	width:249px;
+	height:227px;
+	background:url("../Images/iTrack_Bg.jpg"/*tpa=http://www.nloceanexp.com/en/Images/iTrack_Bg.jpg*/) no-repeat;
+}
+#itrack_title {
+	position:absolute;
+	top:8px;
+	left:57px;
+	font-size:14px;
+	color:#fff;
+}
+#itrack_str {
+	position:absolute;
+	top:50px;
+	left:13px;
+	font-size:14px;
+}
+#itrack_code {
+	position:absolute;
+	top:80px;
+	left:13px;
+	padding:5px;
+	width:211px;
+	height:80px;
+	border:1px solid #ddd;
+	background:#fff;
+	overflow-y:auto;
+}
+#itrack_button {
+	position:absolute;
+	top:186px;
+	left:85px;
+	width:79px;
+	height:24px;
+	font-family:"微软雅黑";
+	color:#fff;
+	border:none;
+	background:#c50000;
+	cursor:pointer;
+}
+
+.ititle {
+	position:relative;
+	z-index:1;
+	height:38px;
+	line-height:36px;
+	font-size:14px;
+	font-weight:bold;
+	color:#302f2f;
+}
+.ititle img {
+	position:absolute;
+	top:13px;
+	right:0px;
+}
+#iservice_blk {
+	position:absolute;
+	top:27px;
+	left:335px;
+	width:238px;
+	height:227px;
+}
+#iservice_button_left {
+	position:absolute;
+	top:120px;
+	left:-30px;
+	font-family:"宋体";
+	font-size:40px;
+	font-weight:bold;
+	color:#478bcd;
+	cursor:pointer;
+}
+#iservice_button_right {
+	position:absolute;
+	top:120px;
+	right:-30px;
+	font-family:"宋体";
+	font-size:40px;
+	font-weight:bold;
+	color:#478bcd;
+	cursor:pointer;
+}
+#iservice {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:238px;
+	height:174px;
+	overflow:hidden;
+}
+#iservice div {
+	float:left;
+}
+#iservice dl {
+	position:relative;
+	float:left;
+	width:238px;
+	height:174px;
+}
+#iservice dl dt {
+	font-size:0px;
+}
+#iservice dl dt img {
+	width:238px;
+	height:174px;
+}
+#iservice dl dd {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:2;
+	padding:10px;
+	width:218px;
+	font-size:14px;
+	text-align:center;
+	background:url("../Images/iService_Bg.png"/*tpa=http://www.nloceanexp.com/en/Images/iService_Bg.png*/);
+}
+#inews_blk {
+	position:absolute;
+	top:27px;
+	right:33px;
+	width:353px;
+	height:227px;
+}
+#inews_menu {
+	position:absolute;
+	top:8px;
+	right:53px;
+	z-index:2;
+	width:144px;
+	height:35px;
+	background:url("../Images/iNews_Menu_Bg.jpg"/*tpa=http://www.nloceanexp.com/en/Images/iNews_Menu_Bg.jpg*/) no-repeat;
+}
+#inews_menu li {
+	float:left;
+	width:72px;
+	height:35px;
+	line-height:29px;
+	text-align:center;
+	overflow:hidden;
+	cursor:pointer;
+}
+.inews_menu_out {
+}
+.inews_menu_over {
+	background:url("../Images/iNews_Menu_Over.jpg"/*tpa=http://www.nloceanexp.com/en/Images/iNews_Menu_Over.jpg*/) no-repeat center bottom;
+}
+.inews {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	display:none;
+	width:353px;
+	height:174px;
+	overflow:hidden;
+}
+.inews_com {
+	height:124px;
+	line-height:22px;
+	color:#888;
+	background:url("../Images/Line3_ccc.gif"/*tpa=http://www.nloceanexp.com/en/Images/Line3_ccc.gif*/) repeat-x left bottom;
+}
+.inews_com img {
+	float:left;
+	margin-right:20px;
+	width:124px;
+	height:90px;
+}
+.inews_com strong {
+	display:block;
+	padding:6px 0px 8px 0px;
+	line-height:18px;
+}
+.inews ul {
+	position:absolute;
+	bottom:-6px;
+	left:0px;
+	width:353px;
+}
+.inews ul li {
+	padding-left:13px;
+	height:23px;
+	background:url("../Images/Ico3.jpg"/*tpa=http://www.nloceanexp.com/en/Images/Ico3.jpg*/) no-repeat 0px 7px;
+}
+
+/*===================================================================================*/
+
+.left_title {
+	height:30px;
+	font-size:14px;
+	font-weight:bold;
+	color:#222;
+	border-bottom:1px solid #ddd;
+}
+.left_menu {
+	margin-bottom:30px;
+}
+.left_menu_over,.left_menu_out {
+	display:block;
+	padding:10px 0px 12px 20px;
+	border-bottom:1px solid #ddd;
+	background:url("../Images/Ico1.gif"/*tpa=http://www.nloceanexp.com/en/Images/Ico1.gif*/) no-repeat 10px 16px;
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+.left_menu_out:link,.left_menu_out:visited,.left_menu_out:active {
+	color:#222;
+}
+.left_menu_out:hover {
+	color:#0179db;
+}
+.left_menu_over:link,.left_menu_over:visited,.left_menu_over:active,.left_menu_over:hover {
+	color:#0179db;
+	font-weight:bold;
+}
+.left_contact {
+	padding:8px 0px;
+	line-height:22px;
+}
+/*===================================================================================*/
+
+.nodata {
+	padding:100px 0px;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+}
+#title {
+	position:relative;
+	height:30px;
+	line-height:26px;
+	text-align:right;
+	color:#888;
+	border-bottom:1px solid #ddd;
+}
+#title a {
+	color:#888;
+}
+#title a:hover {
+	color:#0179db;
+}
+#title strong {
+	position:absolute;
+	top:0px;
+	left:0px;
+	line-height:normal;
+	font-size:14px;
+	font-weight:bold;
+	color:#0179db;
+}
+#showtext {
+	margin:0px auto;
+	padding-top:18px;
+	width:740px;
+	overflow:hidden;
+}
+.inputtext {
+	padding:0px 5px;
+	height:24px;
+	line-height:24px;
+	border-top:1px solid #ABADB3;
+	border-left:1px solid #ABADB3;
+	border-right:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+}
+.inputarea {
+	padding:5px;
+	border-top:1px solid #ABADB3;
+	border-left:1px solid #ABADB3;
+	border-right:1px solid #e1e1e1;
+	border-bottom:1px solid #e1e1e1;
+	overflow-y:auto;
+}
+.button {
+	padding:3px 10px;
+	color:#333;
+	font-weight:bold;
+	border-top:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	background:#eee;
+	cursor:pointer;
+}
+.button2 {
+	width:90px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	font-weight:bold;
+	color:#333;
+	cursor:pointer;
+	border:none;
+	background:url("../Images/Button2_Bg.jpg"/*tpa=http://www.nloceanexp.com/en/Images/Button2_Bg.jpg*/) no-repeat;
+}
+.button2 a {
+	color:#333;
+}
+
+.editorc {
+	line-height:1.8;
+}
+.editorc p {
+	margin-bottom:15px;
+}
+.editorc a:link,.editorc a:visited,.editorc a:active {
+	text-decoration:underline;
+}
+.editorc a:hover {
+	text-decoration:underline;	
+}
+.editorc ul {
+	margin-left:35px;
+}
+.editorc ul li {
+	list-style-type:disc;
+	line-height:18px;
+}
+.editorc ol {
+	margin-left:35px;
+}
+.editorc ol li {
+	list-style-type:decimal;
+	line-height:18px;
+}
+.editorc table {
+	margin-bottom:15px;
+	border:none;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+.editorc td {
+	padding:6px 5px;
+	border:none;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.editorc td table {
+	margin-bottom:0px;
+}
+.editorc td p {
+	margin:0px;
+	padding:0px;
+}
+
+#prenext {
+	position:relative;
+	margin:20px auto 0px auto;
+	padding-top:12px;
+	width:740px;
+	height:38px;
+	background:url("../Images/Line3_ccc.gif"/*tpa=http://www.nloceanexp.com/en/Images/Line3_ccc.gif*/) repeat-x;
+	overflow:hidden;
+}
+#prenext p {
+	height:20px;
+}
+#prenext_back {
+	position:absolute;
+	top:12px;
+	right:0px;
+	font-weight:bold;
+}
+/*===================================================================================*/
+/* 企业图片列表 */
+
+#about_image_blk {
+	margin:0px auto;
+	width:700px;
+	overflow:hidden;
+}
+#about_image {
+	width:735px;
+}
+#about_image dl {
+	float:left;
+	margin:20px 35px 0px 0px;
+	width:210px;
+	text-align:center;
+}
+#about_image dl dt {
+	font-size:0px;
+}
+#about_image dl dt img {
+	padding:1px;
+	width:200px;
+	height:150px;
+	border:4px solid #ddd;
+}
+#about_image dl dt img:hover {
+	border:4px solid #0179db;
+}
+#about_image dl dd {
+	padding-top:8px;
+	height:18px;
+	line-height:18px;
+	overflow:hidden;
+}
+
+/*===================================================================================*/
+/* 新闻列表 */
+#news {
+	margin:5px auto 0px auto;
+	padding-top:1px;
+	width:738px;
+}
+#news li {
+	margin-top:10px;
+	padding:2px 0px 0px 20px;
+	height:29px;
+	background:url("../Images/News_Line.png"/*tpa=http://www.nloceanexp.com/en/Images/News_Line.png*/) no-repeat left bottom;
+}
+#news span {
+	float:right;
+}
+#news_title {
+	margin:25px auto 0px auto;
+	width:700px;
+	line-height:18px;
+	text-align:center;
+	font-size:14px;
+}
+#news_info {
+	margin:0px auto;
+	padding:15px 0px 10px 0px;
+	width:740px;
+	text-align:center;
+	color:#999;
+	background:url("../Images/Line3_ccc.gif"/*tpa=http://www.nloceanexp.com/en/Images/Line3_ccc.gif*/) repeat-x left bottom;
+}
+
+/*===================================================================================*/
+/* 查询 */
+
+#track {
+	margin:0px auto;
+	width:500px;
+}
+#track_language {
+	padding:30px 0px;
+	text-align:center;
+}
+#track_code {
+	display:block;
+	padding:10px;
+	width:480px;
+	height:200px;
+	line-height:18px;
+	border:1px solid #ddd;
+	overflow-y:auto;
+}
+#track_button {
+	padding:20px 0px;
+	text-align:center;
+}
+#track_button input {
+	margin:0px 20px;
+	width:90px;
+	height:30px;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#fff;
+	border:none;
+	background:#c50000;
+	cursor:pointer;
+}
+#track_str {
+	line-height:1.8;
+}
+
+/*===================================================================================*/
+/* 浮动在线客服 */
+
+#qq_online {
+	position:absolute;
+	z-index:99;
+	width:130px;
+}
+#qq_online_top {
+	height:26px;
+	background:url("../images/QQ_Top_Bg.gif"/*tpa=http://www.nloceanexp.com/en/images/QQ_Top_Bg.gif*/) no-repeat;
+}
+#qq_online_top p {
+	padding:6px 10px 0px 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#fff;
+}
+#qq_online_top p img {
+	margin-top:2px;
+	float:right;
+	cursor:pointer;
+}
+#qq_online_list {
+	background:url("../images/QQ_Middle_Bg.gif"/*tpa=http://www.nloceanexp.com/en/images/QQ_Middle_Bg.gif*/) repeat-y;
+}
+#qq_online_list p {
+	position:relative;
+	margin:0px 3px;
+	width:124px;
+	height:25px;
+	font-family:"宋体";
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	background:#fff;
+}
+#qq_online_list p:hover {
+	border-top:1px solid #A3E7FC;
+	border-bottom:1px solid #A3E7FC;
+	background:#E1F7FD;
+}
+#qq_online_list p img {
+	position:absolute;
+	top:2px;
+	left:5px;
+	width:21px;
+	height:21px;
+}
+#qq_online_list p a {
+	position:absolute;
+	top:6px;
+	left:31px;
+}
+#qq_online_bottom {
+	height:42px;
+	font-size:0px;
+	background:url("../images/QQ_Bottom_Bg.gif"/*tpa=http://www.nloceanexp.com/en/images/QQ_Bottom_Bg.gif*/) no-repeat;
+}
+
+/*
+#qq_online {
+	position:absolute;
+	z-index:99;
+	width:150px;
+}
+#qq_online_top {
+	position:relative;
+	height:65px;
+	background:url(../Images/QQ_Top.jpg) no-repeat;
+}
+#qq_online_top span {
+	position:absolute;
+	top:18px;
+	right:17px;
+	display:block;
+	width:62px;
+	height:11px;
+	cursor:pointer;
+}
+#qq_online_list {
+	padding-top:10px;
+	background:url(../Images/QQ_Bg.jpg) repeat-y;
+}
+#qq_online_list p {
+	position:relative;
+	margin-left:16px;
+	width:118px;
+	height:40px;
+}
+#qq_online_list p img {
+	position:absolute;
+	top:0px;
+	left:5px;
+	width:30px;
+	height:30px;
+}
+#qq_online_list p a {
+	position:absolute;
+	top:10px;
+	left:43px;
+	font-weight:bold;
+}
+#qq_online_bottom {
+	height:7px;
+	font-size:0px;
+	background:url(../Images/QQ_Bottom.jpg) no-repeat;
+}
+*/
+/*===================================================================================*/
+
+#products_page {
+	margin:40px auto 0px auto;
+	width:740px;
+	height:22px;
+}
+#news_page {
+	margin:30px auto 0px auto;
+	width:740px;
+	height:22px;
+}
+.fypage_blk {
+	font-family:"宋体";
+	height:22px;
+	overflow:hidden;
+}
+.fypage a {
+	float:left;
+	display:block;
+	margin-right:4px;
+	padding:0px 5px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	text-decoration:none;
+	overflow:hidden;
+	outline:none;
+    -moz-outline:none;
+	blr:expression(this.onFocus=this.blur());
+}
+.fypage a:link,.fypage a:visited,.fypage a:active {
+	color:#555;
+	text-decoration:none;
+	border:1px solid #ddd;
+	background:#fff;
+}
+.fypage a:hover {
+	color:#fff;
+	border:1px solid #0179db;
+	background:#0179db;
+}
+.fypage a.fypage_str {
+	line-height:22px;
+}
+.fypage span {
+	float:left;
+	display:block;
+	margin-right:4px;
+	padding:0px 5px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	overflow:hidden;
+}
+.fypage span.fypage_current {
+	line-height:20px;
+	font-weight:bold;
+	color:#fff;
+	border:1px solid #0179db;
+	background:#0179db;
+}
+.fypage span.fypage_disabled {
+	line-height:22px;
+	color:#555;
+	border:1px solid #ddd;
+	background:#fff;
+	overflow:hidden;
+}
+.fypage_sl {
+	float:left;
+	display:block;
+	margin-right:4px;
+	width:15px;
+	height:20px;
+	line-height:20px;
+	font-weight:normal;
+	color:#555;
+}
+.fypage_go {
+	float:left;
+	position:relative;
+	width:100px;
+	height:22px;
+	overflow:hidden;
+}
+#fypage_gov {
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:0px 3px;
+	width:40px;
+	height:20px;
+	line-height:20px;
+	color:#555;
+	border:1px solid #ddd;
+	background:#fff;
+}
+#fypage_gobtn {
+	position:absolute;
+	top:0px;
+	left:52px;
+	color:#555;
+	line-height:22px;
+	border:1px solid #ddd;
+	background:#fff;
+	cursor:pointer;
+}
+#fypage_gobtn:hover {
+	color:#fff;
+	border:1px solid #0179db;
+	background:#0179db;
+}

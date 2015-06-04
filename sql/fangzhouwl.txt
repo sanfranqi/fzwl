@@ -1,0 +1,14 @@
+#==========访问地址==============
+正式域名：
+首页：www.fangzhouwl.com
+后台：www.fangzhouwl.com/back_door
+
+
+临时备案前域名：（需要输入密码：fangzhou888）
+http://hyu1446590001.my3w.com
+http://hyu1446590001.my3w.com/back_door/login.php
+
+
+#==========后台权限==============
+用户名：chx
+密码：888888
